@@ -1,0 +1,14 @@
+<p>userlist works!</p>
+
+<h3 *ngIf="isLoading">Loading data....</h3>
+
+<div *ngFor="let user of userList">
+  <div (click)="handleUserClicked(user)">
+    <h4>{{ user.name }}</h4>
+    <p>Email: {{ user.birthdate }}</p>
+    <p>Address: {{ user.phone }}</p>
+    <img src="{{ user.avatar }}" style="width: 200px; height: 150px" />
+    <br/>
+    <button (click)="handlesendObject(user)">Send using state</button>  
+</div>
+</div>
